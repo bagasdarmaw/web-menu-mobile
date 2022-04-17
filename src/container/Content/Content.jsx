@@ -12,10 +12,9 @@ const Content = () => {
 
   const handleFilterCategory = (category) => {
     const filteredData = data.filter((item) => {
-      if(item.category === category){
+      if (item.category === category) {
         return item;
-      } 
-      else if (category === "all") {
+      } else if (category === "all") {
         return item;
       }
     });
@@ -27,10 +26,9 @@ const Content = () => {
     <>
       <div className="container">
         <div className="app__menu row">
-          
-          <Dropmenu 
-          categorys={generateCategoryDataForDropdown()} 
-          onCategoryFilter={handleFilterCategory}
+          <Dropmenu
+            categorys={generateCategoryDataForDropdown()}
+            onCategoryFilter={handleFilterCategory}
           />
 
           {allData.map((item) => (
